@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Box, Heading, Input, Button, List, ListItem, ListIcon, VStack, HStack, IconButton, useToast } from "@chakra-ui/react";
+import { Box, Input, List, ListItem, VStack, HStack, IconButton, useToast } from "@chakra-ui/react";
+import Header from "../components/Header";
 import { FaPlus, FaTrash } from "react-icons/fa";
 
 const Index = () => {
@@ -36,8 +37,8 @@ const Index = () => {
   };
 
   return (
-    <VStack p={8}>
-      <Heading mb="8">Todo App</Heading>
+    <VStack spacing={8}>
+      <Header />
       <HStack>
         <Input value={inputValue} onChange={handleInputChange} onKeyPress={handleKeyPress} placeholder="Add a new task..." />
         <IconButton icon={<FaPlus />} onClick={addTodo} colorScheme="blue" aria-label="Add todo" />
